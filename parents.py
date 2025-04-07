@@ -15,11 +15,11 @@ def camera_transforms():
     camera_shapes = cmds.ls(cameras=True)
     cameras = transforms_from_shapes_nodes(camera_shapes)
     
-    return lights
+    return cameras
 
 if __name__ == "__main__":
-    lights = camera_transforms()
-    cmds.window(title="Lights")
+    cameras = camera_transforms()
+    cmds.window(title="Cameras")
     cmds.paneLayout()
     cmds.textScrollList(append=cameras)
     cmds.showWindow()
